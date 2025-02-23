@@ -1,0 +1,166 @@
+/* Health Section Container */
+.health-section {
+  width: 80%;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Divider (HR Tag) */
+.section-divider {
+  border: none;
+  height: 2px;
+  background: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Main Title: "Create Your GreenBox" */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2d572c; /* Dark green */
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Each Section (Breakfast, Lunch, Dinner, Snacks) */
+.section {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Section Header (Clickable, Includes Arrow) */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: #f5f5f5;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+/* Hover Effect for Section Header */
+.section-header:hover {
+  background: #e0e0e0;
+}
+
+/* Section Title with Arrow Next to It */
+.section-title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between text and arrow */
+}
+
+/* Arrow Styling */
+.arrow {
+  transition: transform 0.3s ease-in-out;
+  font-size: 18px;
+}
+
+/* Rotating Arrow on Expand */
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Expanded Content (Recipe List) */
+.section-content {
+  background: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 0 0 8px 8px;
+  animation: expandSection 0.3s ease-in-out;
+}
+
+/* Recipe Card */
+.recipe {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect on Recipe */
+.recipe:hover {
+  transform: translateY(-3px);
+}
+
+/* Recipe Title */
+.recipe h4 {
+  font-size: 18px;
+  color: #2d572c; /* Dark green */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Ingredients List */
+.recipe p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* "Add Ingredients to Cart" Button */
+.recipe button {
+  background: #2d572c; /* Dark Green */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.recipe button:hover {
+  background: #1e3d1e; /* Even darker green */
+}
+
+/* Expand Section Animation */
+@keyframes expandSection {
+  from {
+      opacity: 0;
+      transform: scaleY(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scaleY(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .health-section {
+      width: 95%;
+      padding: 20px;
+  }
+
+  .section-header {
+      font-size: 18px;
+      padding: 12px 15px;
+  }
+
+  .recipe h4 {
+      font-size: 16px;
+  }
+
+  .recipe p {
+      font-size: 14px;
+  }
+
+  .recipe button {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+}
